@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Workout Profiles Angular Js</title>
+<link href="./css/workout-profile.css" rel="stylesheet" type="text/css" />
+<link rel = "stylesheet"
+         href = "https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.css"/>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-animate.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-aria.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular-messages.min.js"></script>
+      <script src = "https://ajax.googleapis.com/ajax/libs/angular_material/1.1.0/angular-material.min.js"></script>
+      
+      <link rel="stylesheet" href="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.css"/>
+	  <script src="https://unpkg.com/ng-table@2.0.2/bundles/ng-table.min.js"></script>
+	  
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+      
+	  <script type="text/javascript" src="./js/module/workout-profile-main.js"></script>
+	  <script type="text/javascript" src="./js/controller/listAllUsersController.js"></script>
+	  <script type="text/javascript" src="./js/controller/createUsersController.js"></script>
+	  <script type="text/javascript" src="./js/controller/userStatsController.js"></script>
+	  <script type="text/javascript" src="./js/controller/workoutProfileActivityController.js"></script>
+	  <script type="text/javascript" src="./js/controller/userDetailsContainerController.js"></script>
+	   <script type="text/javascript" src="./js/controller/activityListController.js"></script>
+	  
+</head>
+<body ng-app="workoutProfileApp">
+	<div class="myHomeContainer">
+		<md-toolbar class="md-warn simpleBottomMargin">
+		<div class="md-toolbar-tools">
+			<h2 class="md-flex">Workout Profiles</h2>
+		</div>
+		</md-toolbar>
+
+		<div class="innerContainer simpleBottomMargin">
+			<div class="listUserContainer">
+				<div ng-include="'profiles/listAllUsersContainer'"></div>
+			</div>
+
+			<div class="blankSpot"></div>
+			<div class="createUserContainer">
+				<div ng-include="'profiles/createUserContainer'"></div>
+			</div>
+		</div>
+		
+		<div class="userStatsContainer">
+				<div ng-include="'profiles/userStatsContainer'"></div>
+		</div>
+		
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<md-content layout-padding="" ng-controller="createUsersController">
+<md-toolbar>
+<div class="md-toolbar-tools">
+	<h3>Create A New User</h3>
+</div>
+</md-toolbar>
+<form name="projectForm">
+	<md-input-container class="md-block"> <label>First
+		Name</label> <input required="true" name="userName"
+		ng-model="project.firstName"/>
+	<div ng-messages="projectForm.firstName.$error">
+		<div ng-message="required">This is required.</div>
+	</div>
+	</md-input-container>
+
+	<md-input-container class="md-block"> <label>Last
+		Name</label> <input required="true" name="lastName"
+		ng-model="project.lastName" />
+	<div ng-messages="projectForm.lastName.$error">
+		<div ng-message="required">This is required.</div>
+	</div>
+	</md-input-container>
+
+	<md-input-container class="md-block"> <label>Age</label>
+	<input md-maxlength="2" maxlength="2" required="true" name="age"
+		ng-model="project.age" />
+	<div ng-messages="projectForm.age.$error">
+		<div ng-message="required">This is required.</div>
+	</div>
+	</md-input-container>
+
+	<md-button class="md-raised md-primary" ng-click="createNewUser()">Ok</md-button>
+	<md-button class="md-raised md-primary" ng-click="createUserClear()">Clear</md-button>
+
+</form>
+</md-content>

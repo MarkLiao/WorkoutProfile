@@ -1,0 +1,26 @@
+<md-content class="md-padding" ng-controller="userStatsController">
+<md-tabs
+   class="md-accent tabsContainer"
+   md-selected="0">
+<md-tab id="tab1">
+   <md-tab-label>User Details</md-tab-label>
+   <md-tab-body>
+   	 <div ng-show="noUserSelected" class="unselectedUserMsg">Please select a user from the list above.</div>
+     <div ng-hide="noUserSelected" ng-include="'userStats/getUserDetailsContainer'"></div>
+   </md-tab-body>
+</md-tab>
+<md-tab
+   id="tab2" ng-disabled="noUserSelected">
+   <md-tab-label>Activity List</md-tab-label>
+   <md-tab-body>
+    	<div  class="activityListContainer" ng-include="'userStats/getActivityListContainer'"></div>
+   </md-tab-body>
+</md-tab>
+<md-tab id="tab3" ng-disabled="noUserSelected">
+   <md-tab-label>Add Activity</md-tab-label>
+   <md-tab-body>
+       <div class="activityCreateContainer" ng-include="'userStats/getActivityContainer'"></div>
+   </md-tab-body>
+</md-tab>
+</md-tabs>
+</md-content>

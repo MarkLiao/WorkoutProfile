@@ -1,0 +1,14 @@
+<md-content ng-controller="activityListController">
+<table ng-table="tableParams" class="table table-bordered" show-filter="false">
+    <tr ng-repeat="activity in $data">
+        <td title="'Activity'" filter="{ workoutActivity: 'text'}" sortable="'workoutActivity'">
+            {{activity.workoutActivity}}</td>
+        <td title="'Activity Type'" filter="{ workoutActivityType: 'text'}" sortable="'workoutActivityType'">
+            {{activity.workoutActivityType}}</td>
+        <td title="'Workout Day Of The Week'" filter="{ workoutDayOfTheWeek: 'text'}" sortable="'workoutDayOfTheWeek'">
+            {{activity.workoutDayOfTheWeek}}</td>
+        <td title="'Calories Burnt'" filter="{ caloriesBurnt: 'number'}" sortable="'caloriesBurnt'">
+            {{activity.caloriesBurnt}}</td>
+    </tr>
+</table>
+</md-content>

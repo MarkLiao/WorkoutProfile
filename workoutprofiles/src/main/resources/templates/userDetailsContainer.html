@@ -1,0 +1,33 @@
+<md-content ng-controller="userDetailsController">
+<form name="userDetailsForm">
+	<md-input-container flex="66"> <label>User Id</label> 
+		<input ng-readonly="true" name="userId" ng-model="userDetails.userId"/>  
+	</md-input-container>
+	<div layout-gt-sm="row">
+	<md-input-container flex="15"> <label>First Name</label> 
+		<input required="true" name="userFirstName" ng-model="userDetails.userFirstName" />	
+	</md-input-container>
+	<md-input-container flex="15"> <label>Last Name</label> 
+		<input required="true" name="userLastName" ng-model="userDetails.userLastName" />	
+	</md-input-container>
+	</div>
+	<div layout-gt-sm="row">
+	<md-input-container flex="33"> <label>Age</label> 
+		<input required="true" name="userAge" ng-model="userDetails.userAge" /> 
+	</md-input-container>
+	<md-input-container flex="33"> <label>Gender</label> 
+		<md-select ng-model="userDetails.userGender" placeholder="M/F">
+              <md-option value="male">Male</md-option>
+              <md-option value="female">Female</md-option>
+    </md-select>		
+	</md-input-container>
+	<md-input-container flex="33"> <label>Weight</label> 
+		<input required="true" name="userweight" ng-model="userDetails.userWeight" /> 
+	</md-input-container>
+	<md-input-container flex="33"> <label>Height</label> 
+		<input required="true" name="userHeight" ng-model="userDetails.userHeight" /> 
+	</md-input-container>
+	</div>
+	<md-button class="md-raised md-primary" ng-click="saveUserDetails(this)">Save</md-button>
+</form>
+</md-content>

@@ -1,0 +1,28 @@
+<md-content ng-controller="workoutProfileActivityController">
+<form name="activityForm" >
+	<div layout-gt-sm="row">
+	<md-input-container flex="66"> <label>Workout Activity</label> <input required="true"
+		name="workoutActivity" ng-model="activity.workoutActivity" />  </md-input-container>
+	<md-input-container flex="15"> <label>Workout Activity Type</label> 
+	<md-select ng-model="activity.workoutActivityType">
+              <md-option ng-repeat="workoutActivity in workoutActivityList" value="{{workoutActivity.type}}">
+                {{workoutActivity.type}}
+              </md-option>
+    </md-select>	
+	</md-input-container>
+	<md-input-container flex="15"> <label>Workout Day Of The Week</label> 
+	<md-select ng-model="activity.workoutDayOfTheWeek">
+              <md-option ng-repeat="day in dayOfWeekList" value="{{day.dayOfWeek}}">
+                {{day.dayOfWeek}}
+              </md-option>
+    </md-select>		
+	</md-input-container>
+	</div>
+	<div layout-gt-sm="row">
+	<md-input-container flex="33"> <label>Calories Burnt</label> <input required="true"
+		name="caloriesBurnt" ng-model="activity.caloriesBurnt" /> 
+	</md-input-container>
+	</div>
+	<md-button class="md-raised md-primary" ng-click="addActivity(this)">Add Activity</md-button>
+</form>
+</md-content>
